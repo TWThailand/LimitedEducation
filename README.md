@@ -1,7 +1,9 @@
 # limited_education
 [![CircleCI](https://circleci.com/gh/TWThailand/LimitedEducation.svg?style=svg)](https://circleci.com/gh/TWThailand/LimitedEducation)
+# Limited Edition Education
+>>>>>>> [#44] [Viky] #Created template with running vue
 
-> A Vue.js project
+> A open source contribution for unprivileged children's education
 
 ## Build Setup
 
@@ -20,9 +22,6 @@ npm run build --report
 
 # run unit tests
 npm run unit
-
-# run e2e tests
-npm run e2e
 
 # run all tests
 npm test
