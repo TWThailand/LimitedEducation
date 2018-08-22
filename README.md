@@ -1,7 +1,6 @@
-# limited_education
-[![CircleCI](https://circleci.com/gh/TWThailand/LimitedEducation.svg?style=svg)](https://circleci.com/gh/TWThailand/LimitedEducation)
 # Limited Edition Education
->>>>>>> [#44] [Viky] #Created template with running vue
+
+[![CircleCI](https://circleci.com/gh/TWThailand/LimitedEducation.svg?style=svg)](https://circleci.com/gh/TWThailand/LimitedEducation)
 
 > A open source contribution for unprivileged children's education
 
