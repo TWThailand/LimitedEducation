@@ -1,7 +1,76 @@
 body {
+  background: #000;
   margin: 0;
-  #home {
-    background: #000;
+  color: #FFF;
+  font-size: 21px;
+  #home {  
     height: 100vh;
-  }  
+    .logo {
+      background: url('../assets/logo.png') center center no-repeat;
+      height: 300px;
+      background-size: 50%;
+    }
+    .desc {
+      margin: 0 20px;
+      text-align: center;
+    }
+    .hashtag {
+      margin: 15px 10px;
+      text-align: center;
+    }
+    .items {
+      display: flex;
+      flex-flow: row wrap;
+      .item {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height: 340px;
+        width: 270px;
+        margin: 10px;
+        background: #FFF;
+        text-align: center;
+        color: #000;
+        flex: 1 1 33%;
+        .count {
+          flex: 1 1 10%;
+          background: red;
+          width: 100%;
+        }
+        .productImage {
+          flex: 1 1 50%;
+          background: url("../assets/logo.png") center center no-repeat;
+          background-size: 100%;
+          width: 100%;
+        }
+        .productDesc {
+          flex: 1 1 30%;
+          display: flex;
+          flex-flow: column;
+          align-self: flex-start;
+          padding-left: 10px;
+          font-weight: 400;
+          .title {
+            flex: 0 1 33%;
+          }
+          .brand-name {
+            flex: 0 1 33%;
+            font-size: 28px;
+            font-weight: 600;
+          }
+          .amount {
+            flex: 0 1 33%;
+          }
+        }
+        .perorder {
+          flex: 0 1 10%;
+          background: red;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          height: 10px;
+          margin-bottom: 10px; 
+        }
+      }
+    }
+  }
 }
