@@ -1,4 +1,5 @@
 # limited_education
+[![CircleCI](https://circleci.com/gh/TWThailand/LimitedEducation.svg?style=svg)](https://circleci.com/gh/TWThailand/LimitedEducation)
 
 > A Vue.js project
 
