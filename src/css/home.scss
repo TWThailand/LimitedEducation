@@ -18,74 +18,93 @@ body {
       margin: 15px 10px;
       text-align: center;
     }
-    .category-heading {
-      line-height: 1.5;
-      text-align: left;
-      position: relative;
-      overflow: hidden;
-      margin: 0 10px;
-      &::after {
-        content: "";
-        position: absolute;
-        height: 1px;
-        width: 100%;
-        border-bottom: 3px solid lightgray;
-        bottom: 40%;
+    .category{
+      margin-top: 20px;
+      .category-heading {
+        line-height: 1.5;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
         margin: 0 10px;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          border-bottom: 3px solid lightgray;
+          bottom: 40%;
+          margin: 0 10px;
+        }
       }
-    }
-    .items {
-      display: flex;
-      flex-flow: row wrap;
-      .item {
+      .items {
         display: flex;
-        flex-flow: column;
-        align-items: center;
-        height: 340px;
-        width: 270px;
-        margin: 10px;
-        background: #FFF;
-        text-align: center;
-        color: #000;
-        flex: 1 1 33%;
-        .count {
-          flex: 1 1 10%;
-          background: red;
-          width: 100%;
-        }
-        .productImage {
-          flex: 1 1 50%;
-          background: url("../assets/logo.png") center center no-repeat;
-          background-size: 100%;
-          width: 100%;
-        }
-        .productDesc {
-          flex: 1 1 30%;
-          padding-left: 5px;
-          font-weight: 400;
+        flex-flow: row wrap;
+        .item {
           display: flex;
           flex-flow: column;
-          align-items: flex-start;
-          justify-content: space-evenly;
-          .title {
+          align-items: center;
+          height: 340px;
+          width: 270px;
+          margin: 10px;
+          background: #FFF;
+          text-align: center;
+          color: #000;
+          flex: 1 1 33%;
+          .count {
+            flex: 1 1 10%;
+            background: red;
+            width: 100%;
           }
-          .brand-name {
-            font-size: 28px;
-            font-weight: 600;
-            line-height: 28px;
+          .productImage {
+            flex: 1 1 50%;
+            background: url("../assets/logo.png") center center no-repeat;
+            background-size: 100%;
+            width: 100%;
           }
-          .amount {
+          .productDesc {
+            flex: 1 1 30%;
+            padding-left: 5px;
+            font-weight: 400;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            .title {
+            }
+            .brand-name {
+              font-size: 28px;
+              font-weight: 600;
+              line-height: 28px;
+            }
+            .amount {
+            }
           }
-        }
-        .perorder {
-          flex: 1 1 10%;
-          background: red;
-          color: #FFF;
-          border: 1px solid transparent;
-          border-radius: 5px;
-          height: 10px;
-          margin-bottom: 10px;
-          padding: 0 15px;
+          .perorder {
+            flex: 1 1 10%;
+            background: red;
+            color: #FFF;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            height: 10px;
+            margin-bottom: 10px;
+            padding: 0 15px;
+          }
+          .vote {
+            flex: 0 1 10%;
+            background: #FFF;
+            color: red;
+            border: 1px solid red;
+            border-radius: 5px;
+            height: 10px;
+            margin-bottom: 10px;
+            padding: 0 30px;
+            &:before {
+              content: "+";
+              position: relative;
+              height: 1px;
+              padding-right: 5px;
+            }
+          }
         }
       }
     }
