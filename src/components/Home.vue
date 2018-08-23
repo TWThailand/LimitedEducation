@@ -1,142 +1,66 @@
 <template>
-    <div class="container">
-      <div class="logo"/>
-      <div class="desc">This is a place holder for the description of the website</div>
-      <div class="hashtag">#LimitedEducation</div>
-      <div class="category">        
-        <div class="category-heading">Per-order</div>      
-        <section class="items">
-          <div class="item">
-            <span class="count">Only 3000 left</span>
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">only 2999 Bhat</span>
-            </div>
-            <button class="perorder">Per-order</button>
-          </div>
-          <div class="item">
-            <span class="count">Only 3000 left</span>
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">only 2999 Bhat</span>
-            </div>
-            <button class="perorder">Per-order</button>
-          </div>
-          <div class="item">
-            <span class="count">Only 3000 left</span>
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">only 2999 Bhat</span>
-            </div>
-            <button class="perorder">Per-order</button>
-          </div>
-          <div class="item">
-            <span class="count">Only 3000 left</span>
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">only 2999 Bhat</span>
-            </div>
-            <button class="perorder">Per-order</button>
-          </div>
-          <div class="item">
-            <span class="count">Only 3000 left</span>
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">only 2999 Bhat</span>
-            </div>
-            <button class="perorder">Per-order</button>
-          </div>
-          <div class="item">
-            <span class="count">Only 3000 left</span>
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">only 2999 Bhat</span>
-            </div>
-            <button class="perorder">Per-order</button>
-          </div>
-          <div class="item">
-            <span class="count">Only 3000 left</span>
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">only 2999 Bhat</span>
-            </div>
-            <button class="perorder">Per-order</button>
-          </div>
-        </section>
-      </div>
-      <div class="category">        
-        <div class="category-heading">Vote for you favorite brand</div>      
-        <section class="items">
-          <div class="item">
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">Total votes 999</span>
-            </div>
-            <button class="vote">Vote</button>
-          </div>
-          <div class="item">
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">Total votes 299</span>
-            </div>
-            <button class="vote">Vote</button>
-          </div>
-          <div class="item">
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">Total votes 499</span>
-            </div>
-            <button class="vote">Vote</button>
-          </div>
-          <div class="item">
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">Total votes 209</span>
-            </div>
-            <button class="vote">Vote</button>
-          </div>
-          <div class="item">
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">Total votes 5999</span>
-            </div>
-            <button class="vote">Vote</button>
-          </div>
-          <div class="item">
-            <div class="productImage"/>
-            <div class="productDesc">
-              <span class="title">New Title</span>
-              <span class="brand-name">Some Brand</span>
-              <span class="amount">Total votes 2999</span>
-            </div>
-            <button class="vote">Vote</button>
-          </div>
-        </section>
-        </div>
-      </div>
+  <div class="container">
+    <div class="logo"/>
+    <div class="desc">This is a place holder for the description of the website</div>
+    <div class="hashtag">#LimitedEducation</div>
+    <div class="category">
+      <div class="category-heading">Per-order</div>
+      <section class="items">
+        <item
+          productType="PreOrder"
+          name="Limited Shoe"
+          brand="TW shoes"
+          price="299"
+        />
+        <item
+          productType="PreOrder"
+          name="Limited Pizza"
+          brand="TW Pizza"
+          price="599"
+        />
+        <item
+          productType="PreOrder"
+          name="Limited Steak"
+          brand="TW Steak house"
+          price="785000"
+        />
+        <item
+          productType="PreOrder"
+          name="Limited Phone"
+          brand="TW mobile"
+          price="1200"
+        />
+      </section>
     </div>
+    <div class="category">
+      <div class="category-heading">Vote for you favorite brand</div>
+      <section class="items">
+        <item
+          productType="Vote"
+          name="Black drink"
+          brand="TW cola"
+          totalVote="200"
+        />
+        <item
+          productType="Vote"
+          name="Black Steak"
+          brand="TW Steak house"
+          totalVote="50"
+        />
+        <item
+          productType="Vote"
+          name="ที่เป่าลม"
+          brand="TW gadget"
+          totalVote="120"
+        />
+      </section>
+    </div>
+  </div>
 </template>
+<script>
+  import Item from "./Item";
+
+  export default {
+    components: {Item}
+  }
+</script>
