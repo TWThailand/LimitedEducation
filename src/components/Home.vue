@@ -3,6 +3,7 @@
       <div class="logo"/>
       <div class="desc">This is a place holder for the description of the website</div>
       <div class="hashtag">#LimitedEducation</div>
+      <div class="category-heading">Per-order</div>
       <section class="items">
         <div class="item">
           <span class="count">Only 3000 left</span>
@@ -12,7 +13,7 @@
             <span class="brand-name">Some Brand</span>
             <span class="amount">only 2999 Bhat</span>
           </div>
-          <button class="perorder">per-order</button>
+          <button class="perorder">Per-order</button>
         </div>
         <div class="item">
           <span class="count">Only 3000 left</span>
@@ -22,7 +23,7 @@
             <span class="brand-name">Some Brand</span>
             <span class="amount">only 2999 Bhat</span>
           </div>
-          <button class="perorder">per-order</button>
+          <button class="perorder">Per-order</button>
         </div>
         <div class="item">
           <span class="count">Only 3000 left</span>
@@ -32,7 +33,7 @@
             <span class="brand-name">Some Brand</span>
             <span class="amount">only 2999 Bhat</span>
           </div>
-          <button class="perorder">per-order</button>
+          <button class="perorder">Per-order</button>
         </div>
         <div class="item">
           <span class="count">Only 3000 left</span>
@@ -42,7 +43,7 @@
             <span class="brand-name">Some Brand</span>
             <span class="amount">only 2999 Bhat</span>
           </div>
-          <button class="perorder">per-order</button>
+          <button class="perorder">Per-order</button>
         </div>
         <div class="item">
           <span class="count">Only 3000 left</span>
@@ -52,7 +53,7 @@
             <span class="brand-name">Some Brand</span>
             <span class="amount">only 2999 Bhat</span>
           </div>
-          <button class="perorder">per-order</button>
+          <button class="perorder">Per-order</button>
         </div>
         <div class="item">
           <span class="count">Only 3000 left</span>
@@ -62,7 +63,7 @@
             <span class="brand-name">Some Brand</span>
             <span class="amount">only 2999 Bhat</span>
           </div>
-          <button class="perorder">per-order</button>
+          <button class="perorder">Per-order</button>
         </div>
         <div class="item">
           <span class="count">Only 3000 left</span>
@@ -72,7 +73,7 @@
             <span class="brand-name">Some Brand</span>
             <span class="amount">only 2999 Bhat</span>
           </div>
-          <button class="perorder">per-order</button>
+          <button class="perorder">Per-order</button>
         </div>
       </section>
     </div>
