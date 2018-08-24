@@ -4,7 +4,7 @@
     <div class="desc">This is a place holder for the description of the website</div>
     <div class="hashtag">#LimitedEducation</div>
     <div class="category">
-      <div class="category-heading">Per-order</div>
+      <div class="category-heading">Pre-order</div>
       <section class="items">
         <item
           productType="PreOrder"

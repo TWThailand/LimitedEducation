@@ -7,7 +7,7 @@
       <span class="brand-name">{{brand}}</span>
       <span class="amount">{{amount}}</span>
     </div>
-    <button v-if="preOrder" class="perorder">Per-order</button>
+    <button v-if="preOrder" class="preorder">Pre-order</button>
     <button v-else class="vote">Vote</button>
   </div>
 </template>
