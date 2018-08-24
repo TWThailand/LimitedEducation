@@ -91,10 +91,10 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-prod:
+      - hold:
           type: approval
           requires:
             - build
-          filters:
-            branches:
-              only: master
+      - deploy-prod:
+          requires:
+            - hold
