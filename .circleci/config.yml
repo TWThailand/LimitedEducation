@@ -2,13 +2,16 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 
 version: 2
-jobs:
-  test:
+
+defaults: &defaults
     docker:
       - image: circleci/node:8.11
 
     working_directory: ~/repo
 
+jobs:
+  checkout:
+    <<: *defaults
     steps:
       - checkout
 
@@ -25,44 +28,73 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
 
       # run tests!
+
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
       - run: npm test
 
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - run: npm rebuild node-sass
+      - run: npm run build
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
 
   deploy:
-    docker:
-      - image: circleci/node:8.11
-    working_directory: ~/repo
+    <<: *defaults
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: npm rebuild node-sass && npm run build
-
+      - attach_workspace:
+          at: ~/repo
       # run "$ firebase login:ci" to get your ci token
       # put your token to your circle ci
+      - run: ./node_modules/.bin/firebase use default
+      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+
+  deploy-prod:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      # run "$ firebase login:ci" to get your ci token
+      # put your token to your circle ci
+      - run: ./node_modules/.bin/firebase use production
       - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
 
 workflows:
   version: 2
-  test-and-deploy:
+  test-deploy:
     jobs:
-      - test
-      - deploy:
+      - checkout
+      - test:
+          requires:
+            - checkout
+      - build:
           requires:
             - test
-          filters:
-            branches:
-              only: master
+      - deploy:
+          requires:
+            - build
+          # filters:
+          #   branches:
+          #     only: master
+      - deploy-prod:
+          type: approval
+          requires:
+            - build
+          # filters:
+          #   branches:
+          #     only: master

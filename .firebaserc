@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "limitededucation-th"
+    "default": "limitededucation-th-staging",
+    "production": "limitededucation-th"
   }
 }
