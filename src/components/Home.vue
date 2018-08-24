@@ -10,25 +10,25 @@
           productType="PreOrder"
           name="Limited Shoe"
           brand="TW shoes"
-          price="299"
+          :price=299
         />
         <item
           productType="PreOrder"
           name="Limited Pizza"
           brand="TW Pizza"
-          price="599"
+          :price=599
         />
         <item
           productType="PreOrder"
           name="Limited Steak"
           brand="TW Steak house"
-          price="785000"
+          :price=785000
         />
         <item
           productType="PreOrder"
           name="Limited Phone"
           brand="TW mobile"
-          price="1200"
+          :price=1200
         />
       </section>
     </div>
@@ -39,19 +39,19 @@
           productType="Vote"
           name="Black drink"
           brand="TW cola"
-          totalVote="200"
+          :totalVote=200
         />
         <item
           productType="Vote"
           name="Black Steak"
           brand="TW Steak house"
-          totalVote="50"
+          :totalVote=50
         />
         <item
           productType="Vote"
           name="ที่เป่าลม"
           brand="TW gadget"
-          totalVote="120"
+          :totalVote=120
         />
       </section>
     </div>
