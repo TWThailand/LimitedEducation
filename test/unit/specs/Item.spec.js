@@ -84,7 +84,21 @@ describe('testing the item component', () => {
                     .toEqual("")
             })
         })
-        //TODO : write a test to see if only the pre-order button is rendered
+        //TODO : Find if there is a better way to test this
+        describe('verify only the preorder button is shown ', () => {
+            it('renders the preorder button',()=> {
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.preorder')!== null).toBe(true)
+            })
+            it('does not render the preorder button',()=> {
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.vote')!== null).toBe(false)
+            })
+        })
     })
     describe('Voting Items', () => {
         beforeEach(() => {
@@ -110,6 +124,20 @@ describe('testing the item component', () => {
                     .toEqual('Total votes undefined')
             })
         })
-        //TODO : write a test to see if only the vote button is rendered
+        //TODO : Find if there is a better way to test this
+        describe('verify only the vote button is shown ', () => {
+            it('renders the vote button',()=> {
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.vote')!== null).toBe(true)
+            })
+            it('does not render the preorder button',()=> {
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.preorder')!== null).toBe(false)
+            })
+        })
     })
 })
