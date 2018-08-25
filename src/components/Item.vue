@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <span v-if="preOrder" class="count">Only 3000 left</span>
+    <span v-if="preOrder" class="count">Only {{quantity}} left</span>
     <div class="productImage"/>
     <div class="productDesc">
       <span class="title">{{name}}</span>
@@ -20,6 +20,7 @@
         type: String,
         require: true
       },
+      quantity: Number,
       name: String,
       brand: String,
       price: Number,

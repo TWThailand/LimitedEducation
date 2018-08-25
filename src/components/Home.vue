@@ -8,24 +8,28 @@
       <section class="items">
         <item
           productType="PreOrder"
+          :quantity=1000
           name="Limited Shoe"
           brand="TW shoes"
           :price=299
         />
         <item
           productType="PreOrder"
+          :quantity=2000
           name="Limited Pizza"
           brand="TW Pizza"
           :price=599
         />
         <item
           productType="PreOrder"
+          :quantity=3000
           name="Limited Steak"
           brand="TW Steak house"
           :price=785000
         />
         <item
           productType="PreOrder"
+          :quantity=4100
           name="Limited Phone"
           brand="TW mobile"
           :price=1200
