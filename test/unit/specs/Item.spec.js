@@ -140,4 +140,22 @@ describe('testing the item component', () => {
             })
         })
     })
+    describe('Items other than vote and preorder', () => {
+        beforeEach(() => {
+            Constructor = Vue.extend(Item)
+            propsData = {
+                productType: "xewasdf"
+            }
+        })
+        describe('number of votes for the item', ()=> {
+            it('renders the amount as empty', ()=>{
+                propsData.totalVote = 20
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.amount').textContent)
+                    .toEqual('')
+            })
+        })
+    })
 })
