@@ -52,5 +52,38 @@ describe('testing the item component', () => {
                     .toEqual('Only  left')
             })
         })
+        describe('Product name and brand', ()=> {
+            it('renders the title of the product correctly',()=>{
+                propsData.name = "Awesome Product"
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.title').textContent)
+                    .toEqual("Awesome Product")
+            })
+            it('When product title is undefined',()=>{
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.title').textContent)
+                    .toEqual("")
+            })
+            it('renders the brand-name of the product correctly',()=>{
+                propsData.brand = "Awesome brand"
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.brand-name').textContent)
+                    .toEqual("Awesome brand")
+            })
+            it('When product brand-name is undefined',()=>{
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.brand-name').textContent)
+                    .toEqual("")
+            })
+        })
+        //TODO : write a test to see if only the pre-order button is rendered
     })
 })
