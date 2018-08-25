@@ -86,4 +86,30 @@ describe('testing the item component', () => {
         })
         //TODO : write a test to see if only the pre-order button is rendered
     })
+    describe('Voting Items', () => {
+        beforeEach(() => {
+            Constructor = Vue.extend(Item)
+            propsData = {
+                productType: "Vote"
+            }
+        })
+        describe('number of votes for the item', ()=> {
+            it('renders the number of votes for the items correctly', ()=>{
+                propsData.totalVote = 20
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.amount').textContent)
+                    .toEqual('Total votes 20')
+            })
+            it('When votes in the data is undefined', ()=>{
+                vm = new Constructor({
+                    propsData
+                }).$mount()
+                expect(vm.$el.querySelector('.amount').textContent)
+                    .toEqual('Total votes undefined')
+            })
+        })
+        //TODO : write a test to see if only the vote button is rendered
+    })
 })
