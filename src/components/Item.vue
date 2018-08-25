@@ -33,7 +33,7 @@
       },
       amount() {
         if (this.productType === "PreOrder") {
-          return `only ${this.price} Bath`
+          return `only ${this.price} Baht`
         } else if (this.productType === "Vote") {
           return `Total votes ${this.totalVote}`
         }
