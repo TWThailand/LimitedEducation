@@ -8,7 +8,7 @@
       <span class="amount">{{amount}}</span>
     </div>
     <button v-if="preOrder" class="preorder">Pre-order</button>
-    <button v-else class="vote">Vote</button>
+    <button v-else class="vote" @click="navigateToVote">Vote</button>
   </div>
 </template>
 
@@ -38,6 +38,11 @@
           return `Total votes ${this.totalVote}`
         }
         return ""
+      }
+    },
+    methods: {
+      navigateToVote() {
+        this.$router.push('/Vote')
       }
     }
   }
