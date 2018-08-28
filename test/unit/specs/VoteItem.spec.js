@@ -1,5 +1,11 @@
+import { shallowMount, createLocalVue} from '@vue/test-utils'
 import Vue from 'vue'
 import Item from '@/components/VoteItem'
+import VueRouter from 'vue-router'
+
+const localVue = createLocalVue()
+localVue.use(VueRouter)
+const router = new VueRouter()
 
 describe('testing the vote item component', () => {
     let Constructor, vm, propsData
@@ -25,6 +31,15 @@ describe('testing the vote item component', () => {
                 }).$mount()
                 expect(vm.$el.querySelector('.amount').textContent)
                     .toEqual('Total votes ')
+            })
+            it('When click vote go to /vote', ()=>{
+              const cmp = shallowMount(Item, {localVue, router})
+
+              const spy = jest.fn();
+              cmp.vm.$router.push = spy;
+
+              const el = cmp.find('.vote').trigger('click')
+              expect(cmp.vm.$router.push).toHaveBeenCalledWith('/vote')
             })
         })
         describe('Product name and brand', ()=> {

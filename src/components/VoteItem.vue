@@ -6,7 +6,7 @@
       <span class="brand-name">{{brand}}</span>
       <span class="amount">Total votes {{totalVote}}</span>
     </div>
-    <button @click="navigateToVote">Vote</button>
+    <button class="vote" @click="navigateToVote">Vote</button>
   </div>
 </template>
 
