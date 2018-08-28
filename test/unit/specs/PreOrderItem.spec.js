@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Item from '@/components/Item'
+import Item from '@/components/PreOrderItem'
 
-describe('testing the item component', () => {
+describe('testing the preorder item component', () => {
     let Constructor, vm, propsData
     describe('Pre Order Items', () => {
         beforeEach(() => {
@@ -32,7 +32,7 @@ describe('testing the item component', () => {
                     propsData
                 }).$mount()
                 expect(vm.$el.querySelector('.amount').textContent)
-                    .toEqual('only undefined Baht')
+                    .toEqual('only  Baht')
             })
         })
         describe('Quantity of item left to purchase', () => {
@@ -82,79 +82,6 @@ describe('testing the item component', () => {
                 }).$mount()
                 expect(vm.$el.querySelector('.brand-name').textContent)
                     .toEqual("")
-            })
-        })
-        //TODO : Find if there is a better way to test this
-        describe('verify only the preorder button is shown ', () => {
-            it('renders the preorder button',()=> {
-                vm = new Constructor({
-                    propsData
-                }).$mount()
-                expect(vm.$el.querySelector('.preorder')!== null).toBe(true)
-            })
-            it('does not render the preorder button',()=> {
-                vm = new Constructor({
-                    propsData
-                }).$mount()
-                expect(vm.$el.querySelector('.vote')!== null).toBe(false)
-            })
-        })
-    })
-    describe('Voting Items', () => {
-        beforeEach(() => {
-            Constructor = Vue.extend(Item)
-            propsData = {
-                productType: "Vote"
-            }
-        })
-        describe('number of votes for the item', ()=> {
-            it('renders the number of votes for the items correctly', ()=>{
-                propsData.totalVote = 20
-                vm = new Constructor({
-                    propsData
-                }).$mount()
-                expect(vm.$el.querySelector('.amount').textContent)
-                    .toEqual('Total votes 20')
-            })
-            it('When votes in the data is undefined', ()=>{
-                vm = new Constructor({
-                    propsData
-                }).$mount()
-                expect(vm.$el.querySelector('.amount').textContent)
-                    .toEqual('Total votes undefined')
-            })
-        })
-        //TODO : Find if there is a better way to test this
-        describe('verify only the vote button is shown ', () => {
-            it('renders the vote button',()=> {
-                vm = new Constructor({
-                    propsData
-                }).$mount()
-                expect(vm.$el.querySelector('.vote')!== null).toBe(true)
-            })
-            it('does not render the preorder button',()=> {
-                vm = new Constructor({
-                    propsData
-                }).$mount()
-                expect(vm.$el.querySelector('.preorder')!== null).toBe(false)
-            })
-        })
-    })
-    describe('Items other than vote and preorder', () => {
-        beforeEach(() => {
-            Constructor = Vue.extend(Item)
-            propsData = {
-                productType: "xewasdf"
-            }
-        })
-        describe('number of votes for the item', ()=> {
-            it('renders the amount as empty', ()=>{
-                propsData.totalVote = 20
-                vm = new Constructor({
-                    propsData
-                }).$mount()
-                expect(vm.$el.querySelector('.amount').textContent)
-                    .toEqual('')
             })
         })
     })
