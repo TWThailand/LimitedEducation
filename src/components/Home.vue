@@ -7,6 +7,7 @@
       <div class="category-heading">Pre-order</div>
       <section class="items">
         <item v-for="item in items" v-if="item.productType == 'PreOrder'"
+          v-bind:key="item.name"
           v-bind:productType="item.productType"
           v-bind:quantity="item.quantity"
           v-bind:name="item.name"
@@ -19,6 +20,7 @@
       <div class="category-heading">Vote for you favorite brand</div>
       <section class="items">
         <item v-for="item in items" v-if="item.productType == 'Vote'"
+          v-bind:key="item.name"
           v-bind:productType="item.productType"
           v-bind:name="item.name"
           v-bind:brand="item.brand"
