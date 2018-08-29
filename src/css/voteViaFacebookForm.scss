@@ -1,12 +1,12 @@
 body {
   #vote-via-facebook * {
     background-color: white;
-    color: var(--gray);
+    color: gray;
     padding: 0.5em;
     text-align: justify;
 
     .wrapper {
-      margin-bottom: 2em;
+      margin-bottom: 1em;
     }
 
     .title {
@@ -15,10 +15,11 @@ body {
     }
 
     input[type=text] {
-      color: var(--gray);
-      border: 1px solid var(--gray);
-      width: 100%;
-      margin-top: 0.5em;
+      color: gray;
+      border: 1px solid gray;
+      width: 90%;
+      margin-top: 1em;
+      padding: 1em;
     }
 
     input[type=submit] {
@@ -26,7 +27,8 @@ body {
       color: white;
       border-radius: 5px;
       border-style: none;
-      width: 100%;
+      width: 95%;
+      padding: 1em;
       text-align: center;
     }
   }
