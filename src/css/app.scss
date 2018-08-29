@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=thai');
 @import 'variables.scss';
 @import 'home.scss';
 
@@ -5,5 +6,6 @@ body {
   background: $site_background;
   margin: 0;
   color: $white;
-  font:  21px, Georgia, serif;
+  font-size: 18px;
+  font-family: 'Prompt', sans-serif;
  }
