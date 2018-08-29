@@ -1,0 +1,9 @@
+@import 'variables.scss';
+@import 'home.scss';
+
+body {
+  background: $site_background;
+  margin: 0;
+  color: $white;
+  font:  21px, Georgia, serif;
+ }
