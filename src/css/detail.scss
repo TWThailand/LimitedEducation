@@ -39,6 +39,7 @@ body {
 
   #product-image {
       display: flex;
+      margin-top: 2em;
 
       .product-image-left {
         order: 0;
@@ -52,6 +53,8 @@ body {
   }
 
   #product-description {
+    margin-top: 2em;
+    
     .title {
       font-weight: bold;
       font-size: 1.5em;
