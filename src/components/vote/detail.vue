@@ -1,5 +1,6 @@
 <template>
   <div id="vote-detail">
+    <div id="vote-count">Already voted: {{totalVote}} votes</div>
     <div id="logo-section" class="flex-parent">
       <button class="previous-product flex-child"><</button>
       <img src="../../assets/logo.png" class="logo-limited-education flex-child"/>
@@ -19,11 +20,13 @@
     </div>
   </div>
 </template>
+
 <script>
   export default {
     name: "ProductDetail",
     props: {
-      name: String
+      name: String,
+      totalVote: Number
     }
   }
 </script>
