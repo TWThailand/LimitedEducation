@@ -32,14 +32,15 @@ describe('testing the vote item component', () => {
                 expect(vm.$el.querySelector('.amount').textContent)
                     .toEqual('Total votes ')
             })
-            it('When click vote go to /vote', ()=>{
-              const cmp = shallowMount(Item, {localVue, router})
+            it('When click vote go to /vote and pass product title', ()=>{
+              propsData.name = "Awesome product name"
+              const cmp = shallowMount(Item, {localVue, router, propsData})
 
               const spy = jest.fn();
               cmp.vm.$router.push = spy;
 
               const el = cmp.find('.vote').trigger('click')
-              expect(cmp.vm.$router.push).toHaveBeenCalledWith('/vote')
+              expect(cmp.vm.$router.push).toHaveBeenCalledWith({name: 'vote', params: {name: 'Awesome product name'}})
             })
         })
         describe('Product name and brand', ()=> {

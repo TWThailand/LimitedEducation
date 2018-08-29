@@ -14,7 +14,9 @@ export default new Router({
     },
     {
       path: '/vote',
-      component: VoteDetail
+      name: 'vote',
+      component: VoteDetail,
+      props: true
     }
   ]
 })
