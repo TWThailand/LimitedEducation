@@ -1,0 +1,82 @@
+body {
+
+  .flex-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-child {
+    margin: auto;
+  }
+
+  #vote-count {
+    background-color: red;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 2em;
+  }
+
+  #logo-section {
+    --logo-height: 100px;
+
+    .previous-product {
+      order: 0;
+    }
+
+    .logo-limited-education {
+      order: 1;
+      height: var(--logo-height);
+    }
+
+    .vertically-aligned-x {
+      order: 2;
+      font-size: 16pt;
+    }
+
+    .logo-product {
+      order: 3;
+      height: var(--logo-height);
+    }
+
+    .next-product {
+      order: 4;
+    }
+
+    button {
+      color: red;
+      background-color: black;
+      border-color: red;
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+    }
+  }
+
+  #product-image {
+      display: flex;
+      margin-top: 1em;
+
+      .product-image-left {
+        order: 0;
+        width: 50%;
+      }
+
+      .product-image-right {
+        order: 1;
+        width: 50%;
+      }
+  }
+
+  #product-description {
+    margin-top: 2em;
+    padding: 1em;
+    text-align: justify;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.5em;
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+body {
+  #vote-via-facebook * {
+    background-color: white;
+    color: gray;
+    padding: 0.5em;
+    text-align: justify;
+
+    .wrapper {
+      margin-bottom: 1em;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 20pt;
+    }
+
+    input[type=text] {
+      color: gray;
+      border: 1px solid gray;
+      width: 90%;
+      margin-top: 1em;
+      padding: 1em;
+    }
+
+    input[type=submit] {
+      background-color: red;
+      color: white;
+      border-radius: 5px;
+      border-style: none;
+      width: 95%;
+      padding: 1em;
+      text-align: center;
+    }
+  }
+}

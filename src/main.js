@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './css/app.scss'
+import './css/detail.scss'
+import './css/voteViaFacebookForm.scss'
 
 Vue.config.productionTip = false
 

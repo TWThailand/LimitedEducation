@@ -21,7 +21,7 @@
     },
     methods: {
       navigateToVote() {
-        this.$router.push('/vote')
+        this.$router.push({name: 'vote', params: {name: this.name, totalVote: this.totalVote}})
       }
     }
   }
