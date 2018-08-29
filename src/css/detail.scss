@@ -35,6 +35,15 @@ body {
     .next-product {
       order: 4;
     }
+
+    button {
+      color: red;
+      background-color: black;
+      border-color: red;
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+    }
   }
 
   #product-image {
@@ -54,7 +63,7 @@ body {
 
   #product-description {
     margin-top: 2em;
-    
+
     .title {
       font-weight: bold;
       font-size: 1.5em;
