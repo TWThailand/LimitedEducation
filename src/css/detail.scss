@@ -1,16 +1,61 @@
 body {
-  #logo-section{
+
+  .flex-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-child {
+    margin: auto;
+  }
+
+  #logo-section {
+    --logo-height: 100px;
+
+    .previous-product {
+      order: 0;
+    }
 
     .logo-limited-education {
-      height: 20%;
+      order: 1;
+      height: var(--logo-height);
     }
 
     .vertically-aligned-x {
+      order: 2;
       font-size: 16pt;
     }
 
     .logo-product {
-      height: 20%;
+      order: 3;
+      height: var(--logo-height);
+    }
+
+    .next-product {
+      order: 4;
+    }
+  }
+
+  #product-image {
+      display: flex;
+
+      .product-image-left {
+        order: 0;
+        width: 50%;
+      }
+
+      .product-image-right {
+        order: 1;
+        width: 50%;
+      }
+  }
+
+  #product-description {
+    .title {
+      font-weight: bold;
+      font-size: 1.5em;
+      text-transform: capitalize;
     }
   }
 }
