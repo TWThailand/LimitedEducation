@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './css/home.scss'
 import './css/detail.scss'
+import './css/voteViaFacebookForm.scss'
 
 Vue.config.productionTip = false
 

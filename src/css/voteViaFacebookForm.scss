@@ -1,0 +1,33 @@
+body {
+  #vote-via-facebook * {
+    background-color: white;
+    color: var(--gray);
+    padding: 0.5em;
+    text-align: justify;
+
+    .wrapper {
+      margin-bottom: 2em;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 20pt;
+    }
+
+    input[type=text] {
+      color: var(--gray);
+      border: 1px solid var(--gray);
+      width: 100%;
+      margin-top: 0.5em;
+    }
+
+    input[type=submit] {
+      background-color: red;
+      color: white;
+      border-radius: 5px;
+      border-style: none;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

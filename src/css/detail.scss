@@ -10,6 +10,13 @@ body {
     margin: auto;
   }
 
+  #vote-count {
+    background-color: red;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 2em;
+  }
+
   #logo-section {
     --logo-height: 100px;
 
@@ -63,6 +70,8 @@ body {
 
   #product-description {
     margin-top: 2em;
+    padding: 1em;
+    text-align: justify;
 
     .title {
       font-weight: bold;
